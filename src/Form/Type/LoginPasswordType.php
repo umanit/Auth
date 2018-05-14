@@ -50,10 +50,7 @@ class LoginPasswordType extends AbstractType
                     'attr'        => [
                         'placeholder' => $this->config->getPlaceholder('password_first'),
                     ],
-                    'constraints' => [
-                        new Assert\NotBlank(),
-                        new Assert\Length(['min' => 6]),
-                    ],
+                    'constraints' => new Assert\NotBlank(),
                 ]
             )
             ->add(
